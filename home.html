@@ -13,58 +13,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <img class = "logo" src="public/logo.png" alt="">
-        <div class="fone">(41) 99221-1056</div>
-    </header>
-    <div class="total">
     <div class="sidebar-wrapper sidebar-closed">
         <img class="icons icon-menu" id="button-open" src="public/menu.svg" alt="">
+        <!-- <div class=" icon-search">
+            <img class="icons" src="public/search.svg" alt="">
+        </div> -->
         <img class="icons home" src="public/home.png" alt="">
-        <img class="icons sobre" src="public/bookmark-regular.svg" alt="">
-        <img class="icons pizza" src="public/pizza.png" alt="">
+        <img class="icons videos" src="public/video.png" alt="">
+        <!-- <img class="icons" src="public/user.svg" alt="">
+        <img class="icons" src="public/settings.svg" alt=""> -->
+        <img class="icons design" src="public/design.png" alt="">
         <img class="icons fav" src="public/favorite.png" alt="">
-
+        <div class="icon-logout" id="logout-button">
+            <img class="icons" src="public/log-out.svg" alt="">
+        </div>
     </div>
     <div class="sidebar-wrapper sidebar-open" >
         <div class="menu">
             <img class="icons icon-menu-op" id="button-closed" src="/public/menu.svg" alt="">
+            <!-- <div class=" icon-search-op op">
+                <img class="icons" src="public/search.svg" alt="">
+                <span>Pesquisar</span>   
+            </div> -->
             <div class="op home">
                 <img class="icons" src="public/home.png" alt="">
-                <span>Início</span>
+                <span>Home</span>
             </div>
-            <div class="op sobre">
-                <img class="icons" src="public/bookmark-regular.svg" alt="">
-                <span>Sobre nós</span>
+            <div class="op videos">
+                <img class="icons videos" src="public/video.png" alt="">
+                <span>Vídeos</span>
             </div>
-            <div class="op pizza">
-                <img class="icons" src="public/pizza.png" alt="">
-                <span>Cardápio</span>
+            <!-- <div class="op">
+                <img class="icons" src="public/user.svg" alt="">
+                <span>Usuário</span>
+            </div>
+            <div class="op">
+                <img class="icons" src="public/settings.svg" alt="">
+                <span>Configurações</span>
+            </div> -->
+            <div class="op design">
+                <img class="icons" src="public/design.png" alt="">
+                <span>Design</span>
             </div>
             <div class="op fav">
                 <img class="icons" src="public/favorite.png" alt="">
                 <span>Favoritos</span>
             </div>
+            <div id="user-card" >
+                <p id="user-card-username"></p>
+                <p id="user-card-email"></p>
+            </div>
         </div>
-
+        <div class="icon-logout logout-op" id="logout-button">
+            <img class="icons" src="public/log-out.svg" alt="">
+            <span>Log out</span>
+        </div>
     </div>
     <div class="main">
-        <div id="quote">
-            <h1 id="saudacao"></h1>
-        </div>
+        <h1 id="saudacao"></h1>
+        <p id="system-time">Última atualização: </p>
         <br><br>
-        <div id="quote" class ="bold"> Faça seu pedido pelo telefone: (41) 99221-1056</div>
-        <br>
-        <div id="quote"> Endereço: Lucia Madalena Strapasson, 10, Quatro Barras, PR, Brazil</div>
+        <div id="quote"></div>
         <br>
         <br>
+        <script async src="https://cse.google.com/cse.js?cx=24fd2fbb44a2f4e58"></script>
+        <div id="pesquisa-google">
+            <div class="gcse-search"></div>
+        </div>
 
     </div>
     <script src="js/home.js"></script>
     <script src="js/sidebar.js"></script>
-</div>
-</div>
 </body>
 </html>

@@ -1,4 +1,11 @@
 
+// User Card
+var UserCardUsername = document.getElementById("user-card-username")
+var UserCardEmail = document.getElementById("user-card-email")
+UserCardUsername.appendChild(document.createTextNode(localStorage.getItem("name")))
+UserCardEmail.appendChild(document.createTextNode(localStorage.getItem("email")))
+
+
 // Sidebar
 // Criando variáveis do botão
 const buttonOpen = document.getElementById('button-open')
@@ -40,26 +47,36 @@ document.addEventListener('keydown', function(event){
     }
 })
 
+// Log out
+
+const buttonLogout = document.getElementById('logout-button')
+// Criando o redirecionamento
+buttonLogout.onclick = function () {
+    localStorage.removeItem("name")
+    localStorage.removeItem("email")
+    localStorage.removeItem("id")
+    location.href='/auth.html'
+}
 
 // Redirecionamento vídeos
 
-const buttonVideos = document.querySelectorAll('.sobre')
-console.log(document.querySelectorAll('.sobre'));
+const buttonVideos = document.querySelectorAll('.videos')
+console.log(document.querySelectorAll('.videos'));
 buttonVideos[0].onclick = function(){
-    location.href='/sobre_nos.html'
+    location.href='/videos.html'
 }
 buttonVideos[1].onclick = function(){
-    location.href='/sobre_nos.html'
+    location.href='/videos.html'
 }
 
 // Redirecionamento design
 
-const buttonDesign = document.querySelectorAll('.pizza')
+const buttonDesign = document.querySelectorAll('.design')
 buttonDesign[0].onclick = function(){
-    location.href='/cardapio.html'
+    location.href='/play.html'
 }
 buttonDesign[1].onclick = function(){
-    location.href='/cardapio.html'
+    location.href='/play.html'
 }
 
 // Redirecionamento home
